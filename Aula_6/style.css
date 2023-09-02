@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Oswald:wght@300&family=Righteous&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(255, 47, 10), rgb(171, 144, 10));
+    display: flex;
+    justify-content: center;/* alianha na horizontal*/
+    align-items: center; /* alianha na vertical*/
+    height: 100vh;
+    width: 100vw;
+    
+}
+form{
+    background-color: aliceblue;
+    border-radius: 10px;
+    height: 400px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-conteudo{
+    font-size: 14px;
+    margin: 20px;
+    text-align: left;
+    width: 70%;
+}
+
+.nome-conteudo{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-conteudo input{
+    border-radius: 20px;
+    height: 30px;
+}
+
+.nome-conteudo input::placeholder{
+    padding: 10px;
+    color: black;
+}
+.email-conteudo{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-conteudo input{
+    border-radius: 20px;
+    height: 30px;
+}
+
+.email-conteudo input::placeholder{
+    padding: 10px;
+    color: black;
+} 
+
+.password-conteudo{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.password-conteudo input{
+    border-radius: 20px;
+    height: 30px;
+}
+
+.password-conteudo input::placeholder{
+    padding: 10px;
+    color: black;
+} 
+
+.botoa-conteudo{
+    width: 70%;
+    padding: 20px;
+}
+
+button{
+  width: 100%;
+  background-image: linear-gradient(to right, red,orange);
+  color: aliceblue;
+  height: 30px;
+  border-radius: 10px;
+  border-style:none ;
+}
