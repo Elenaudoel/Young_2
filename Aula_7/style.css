@@ -1,14 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
+:root {
+    --main_color: rgb(0, 255, 225);
+    --secon_color: rgb(0, 153, 255);
+    --thrid_color: rgb(255, 255, 255);
+    --gap: 3rem;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 2.3rem;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
 section.intro-conteudo {
     display: flex;
-    background-color: cadetblue;
+    background-color: #addefe;
+    background-image: linear-gradient(0deg, #addefe 0%, #878ce3 100%);
+    width: 100vw;
+    height: 100vh;
 }
 
 div.bio {
@@ -18,21 +39,32 @@ div.bio {
     font-family: 'Libre Baskerville', serif;
 }
 
-div.imag-vang {
+img.imag-vang {
     justify-content: flex-start;
     margin-right: 100px;
+    margin-top: 50px;
     padding: 30px;
-    border-radius: 40%;
+    border-radius: 9%;
 }
 
-section.galeria-conteudo {
-    background-color: rgb(116, 223, 228);
+
+section.principal-conteudo {
+    background-color: #addefe;
+    background-image: linear-gradient(180deg, #addefe 0%, #878ce3 100%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.principal-conteudo img {
+    padding: 20px;
+}
+
+section.roda-pé {
+    background-color: #addefe;
+    background-image: linear-gradient(0deg, #addefe 0%, #878ce3 100%);
     font-size: 30px;
     padding: 40px;
     font-family: 'Libre Baskerville', serif;
     justify-content: center;
-}
-
-section.principal-conteudo{
-    background-color: lightskyblue;
+    display: flex;
 }
