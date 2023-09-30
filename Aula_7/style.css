@@ -52,12 +52,24 @@ section.principal-conteudo {
     background-color: #addefe;
     background-image: linear-gradient(180deg, #addefe 0%, #878ce3 100%);
     display: flex;
-    flex-wrap: wrap;
+    
 }
 
 .principal-conteudo img {
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+div.main-content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
 
 section.roda-pé {
     background-color: #addefe;
