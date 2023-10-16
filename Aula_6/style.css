@@ -13,7 +13,7 @@ body{
     justify-content: center;/* alianha na horizontal*/
     align-items: center; /* alianha na vertical*/
     height: 100vh;
-    width: 100vw;
+    width: 100vw;                           
     
 }
 form{
