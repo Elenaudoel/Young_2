@@ -3,7 +3,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family:'Dosis', sans-serif;
+    font-family: 'Playpen Sans', cursive;
 }
 
 html{
@@ -71,5 +71,11 @@ button:hover{
 }
 
 button:active{
-    background-color: maroon;
+    background-color: rgb(15, 128, 0);
+}
+.resetar{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

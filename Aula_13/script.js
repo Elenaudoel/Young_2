@@ -8,7 +8,7 @@ const QUESTOES_QUIZ = [
         correta:'c'
     },
     {
-        questao: 'Usado para estilizar a pagina',
+        questao: 'Usado para estilizar a pagina?',
         a:'CSS',
         b:'JAVA',
         c:'JS',
@@ -16,7 +16,7 @@ const QUESTOES_QUIZ = [
         correta:'a'
     },
     {
-        questao: 'Qual a moeda da Ctrlplay',
+        questao: 'Qual a moeda da Ctrlplay?',
         a:'Euro',
         b:'Real',
         c:'Ctrlcash',
@@ -24,7 +24,7 @@ const QUESTOES_QUIZ = [
         correta:'c'
     },
     {
-        questao: 'O que o professor Diego toma em sua caneca',
+        questao: 'O que o prof Diego toma na caneca?',
         a:'Agua',
         b:'Lagrimas de alunos',
         c:'Capuccino',
@@ -32,7 +32,7 @@ const QUESTOES_QUIZ = [
         correta:'d'
     },
     {
-        questao: 'Qual a logo da Ctrlplay',
+        questao: 'Qual a logo da Ctrlplay?',
         a:'Computador',
         b:'Foguete',
         c:'Controle de jogo',
@@ -54,6 +54,7 @@ let questao_atual = 0
 let qtd_corretas = 0
 
 function carregar_questoes(){
+    desmarcar()
     const QUESTAO = QUESTOES_QUIZ[questao_atual]
     TITULO_QUIZ.innerHTML = QUESTAO.questao
     ALTERNATIVA_A.innerHTML = QUESTAO.a
@@ -61,4 +62,43 @@ function carregar_questoes(){
     ALTERNATIVA_C.innerHTML = QUESTAO.c
     ALTERNATIVA_D.innerHTML = QUESTAO.d
 }
+function desmarcar(){
+    RESPOSTAS.forEach((resp_elemento) => {
+        resp_elemento.checked = false
+    })
+}
+
+function pegar_resposta() {
+    let resp = undefined
+    RESPOSTAS.forEach((resposta) =>{
+        if (resposta.checked){
+            resp = resposta.id;
+        }
+    })
+    return resp
+}
+BOTAO.addEventListener('click', () => {
+    const RESP_PLAYER = pegar_resposta()
+    const TOTAL_PERGUNTAS = QUESTOES_QUIZ.length
+
+    if(RESP_PLAYER){
+       if (RESP_PLAYER === QUESTOES_QUIZ[questao_atual].correta){
+          qtd_corretas++
+        }
+        questao_atual++
+        if (questao_atual < TOTAL_PERGUNTAS){
+            carregar_questoes()
+        }
+        else{
+            CONTEINER_QUIZ.innerHTML = `<h1 class="resetar"> Você acertou ${qtd_corretas}/${TOTAL_PERGUNTAS} questões </h1>
+            <button class="resetar-btn" onclick='location.reload()'> Resetar </button>`
+        }
+    } 
+    else {
+        console.log('escolha algo')
+    }
+    
+})
+
+
 carregar_questoes()
