@@ -28,7 +28,7 @@ main {
 }
 
 .poke_img {
-    position: relative;
+    position: absolute;
     bottom: 55%;
     left: 50%;
     transform: translate(-63%, 40%);
